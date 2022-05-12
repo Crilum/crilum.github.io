@@ -39,8 +39,7 @@
     </div>
     <button class="rainbow-text" id="follower">Crilum</button>
     <div id="info">
-        <span id="clicks" onclick="$('#clicks').innerHTML = 'Clicks: 0'; clicks = 0;"
-            >Clicks: 0</span>
+        <span id="clicks">Clicks: 0</span>
     </div>
     <script>
         clicks = 0;
@@ -56,6 +55,7 @@
         $('#clicks').click(function () {
             clicks = 0;
             document.getElementById("clicks").innerHTML = "Clicks: 0";
+            $('#clicks').hide()
         });
     </script>
 </body>
