@@ -44,10 +44,35 @@
             }
         }
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+  $("#follower").hover(function(){
+    var mouseX = 0, mouseY = 0;
+$(document).mousemove(function(e){
+   mouseX = e.pageX;
+   mouseY = e.pageY; 
+});
+
+// cache the selector
+var follower = $("#follower");
+var xp = 0, yp = 0;
+var loop = setInterval(function(){
+    // change 12 to alter damping higher is slower
+    xp += (mouseX - xp) / 12;
+    yp += (mouseY - yp) / 12;
+    follower.css({left:xp, top:yp});
+    
+}, 30);
+    }, function(){
+    console.log("wink wink")
+  });
+});
+    </script>
 </head>
 
 <body>
-    <span class="rainbow-text" class="product-sans">Crilum</span>
+    <span class="rainbow-text" id="follower">Crilum</span>
 </body>
 
 </html>
