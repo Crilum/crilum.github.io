@@ -2,34 +2,127 @@
 
 <head>
     <title>404 | We can't find that page.</title>
+    <link rel="icon" type="image/x-icon" href="./res/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet"> 
-<style>
-    h1 {
-        font-family: 'Poppins', sans-serif;
-    }
-    h3 {
-        font-family: 'Poppins', sans-serif;
-    }
-    hr {
-        height: 3px;
-        color: dimgrey;
-        background-color: dimgrey;
-        border: none;
-        border-color: dimgrey;
-    }
-</style>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            color: rgb(40, 40, 40);
+            text-align: center;
+        }
+
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            color: rgb(40, 40, 40);
+            text-align: center;
+        }
+
+        hr {
+            height: 2px;
+            color: dimgrey;
+            background-color: dimgrey;
+            border: none;
+            border-color: dimgrey;
+        }
+
+        #apps {
+            display: flex;
+            max-height: 69px;
+            max-width: fit-content;
+            text-align: center;
+            border: 1px;
+            border-color: dimgrey;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        p {
+            color: rgb(40, 40, 40);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        #apps img {
+            max-width: 128;
+            max-height: 128;
+        }
+
+        #apps a {
+            text-decoration: none;
+        }
+
+        #apps div {
+            padding: 5px;
+            display: inline-block;
+        }
+
+        #trash {
+            max-width: 65px;
+            position: relative;
+            left: 5px;
+            top: 5px;
+            z-index: 10;
+        }
+
+        #trash img {
+            max-width: 64;
+            max-height: 128;
+        }
+    </style>
 </head>
 
 <body>
-    <div style="text-align: center;">
-        <a href="https://github.com/Crilum"><img src="./res/Fisherman-icon-circle.png" style="max-width: 256px; max-height: 256px;"></a>
+    <div id="trash" style="display: none;">
+        <!--https://www.flaticon.com/free-icons/trash - this Trash icon was created by Freepik - Flaticon-->
+        <img src="./res/trash-lid-on.png" alt="Trash can">
+    </div>
+    <div class="center">
+        <a href="https://github.com/Crilum">
+            <img id="CrilumIcon" src="./res/Fisherman-icon-circle.png" style="max-width: 256px; max-height: 256px;"
+                ondrag="$('#trash').show()" draggable="true">
+        </a>
     </div>
     <br>
-    <h1 style="text-align: center;">404</h1>
+    <h1>404: this page isn't here</h1>
+    <h3>Looks like you've found the end of the Internet!</h3>
     <hr>
-    <h3 style="text-align: center;">Looks like you've found the end of the Internet!</h3>
+    <p class="center"><strong>Check out these cool projects:</strong></p>
+    <div id="apps" class="center">
+        <div id="pi-apps">
+            <a href="https://pi-apps.io"><img
+                    src="https://raw.githubusercontent.com/Botspot/pi-apps/master/icons/logo-128.png">
+                <p>Pi-Apps: the missing<br>Raspberry Pi app store</p>
+            </a>
+        </div>
+        <div id="websh">
+            <a href="https://crilum.github.io/websh"><img
+                    src="https://raw.githubusercontent.com/Crilum/websh/main/pics/terminal-favicon.png">
+                <p>websh: the web<br>powered shell emulator</p>
+            </a>
+        </div>
+        <div id="update">
+            <a href="https://github.com/Crilum/update"><img
+                    src="https://raw.githubusercontent.com/Crilum/update/main/Imgs/update_simple.png">
+                <p><br>update: the all-in-one<br>linux package updater</p>
+            </a>
+        </div>
+        <div id="styleprompt">
+            <a href="https://github.com/Crilum/styleprompt"><img
+                    src="https://raw.githubusercontent.com/Crilum/styleprompt/main/res/styleprompt-128.png">
+                <p>styleprompt: the bash<br>prompt creation tool</p>
+            </a>
+        </div>
+    </div>
 </body>
 
 </html>
