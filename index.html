@@ -46,7 +46,11 @@
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        document.body.style.overflow = "hidden";
+        var xPos = window.scrollX;
+  var yPos = window.scrollY;
+  window.onscroll = () => {
+    window.scroll(xPos, yPos);
+  };
         $(document).ready(function(){
   $("#follower").hover(function(){
     var mouseX = 0, mouseY = 0;
