@@ -28,6 +28,7 @@
             animation: rainbow 8s ease infinite;
             position: relative;
             top: 40%;
+            text-decoration: underline;
         }
 
         @keyframes rainbow {
@@ -46,11 +47,6 @@
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        var xPos = window.scrollX;
-  var yPos = window.scrollY;
-  window.onscroll = () => {
-    window.scroll(xPos, yPos);
-  };
         $(document).ready(function(){
   $("#follower").hover(function(){
     var mouseX = 0, mouseY = 0;
@@ -77,7 +73,7 @@ var loop = setInterval(function(){
 </head>
 
 <body>
-    <span class="rainbow-text" id="follower">Crilum</span>
+    <a href="https://github.com/Crilum"><span class="rainbow-text" id="follower">Crilum</span></a>
 </body>
 
 </html>
