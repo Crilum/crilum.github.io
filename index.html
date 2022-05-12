@@ -3,76 +3,38 @@
 <head>
     <title>Crilum</title>
     <link rel="icon" type="image/x-icon" href="./res/favicon.ico">
-    <style>
-        body {
-            background-color: #353b48;
-            color: #dcdde1;
-        }
-        
-        @font-face {
-            font-family: 'Product Sans';
-            font-style: normal;
-            font-weight: 900;
-            src: local('Product Sans Black'), local('ProductSans-Black'), url(https://fonts.gstatic.com/s/productsans/v9/pxicypQkot1TnFhsFMOfGShdlPCbT2lB.woff2) format('woff2');
-        }
-        .rainbow-text {
-            background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
-            text-align: center;
-            background-size: 800% 800%;
-            background-clip: text;
-            color: transparent;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 300px;
-            font-family: 'Product Sans';
-            animation: rainbow 8s ease infinite;
-            position: relative;
-            top: 40%;
-            text-decoration: none;
-        }
-
-        @keyframes rainbow {
-            0% {
-                background-position: 0% 50%
-            }
-
-            50% {
-                background-position: 100% 25%
-            }
-
-            100% {
-                background-position: 0% 50%
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="./style/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function(){
-  $("#follower").hover(function(){
-    var mouseX = 0, mouseY = 0;
-$(document).mousemove(function(e){
-   mouseX = e.pageX;
-   mouseY = e.pageY; 
-});
+        $(document).ready(function () {
+            $("#follower").hover(function () {
+                var mouseX = 0, mouseY = 0;
+                $(document).mousemove(function (e) {
+                    mouseX = e.pageX;
+                    mouseY = e.pageY;
+                });
 
-// cache the selector
-var follower = $("#follower");
-var xp = 0, yp = 0;
-var loop = setInterval(function(){
-    // change 12 to alter damping higher is slower
-    xp += (mouseX - xp) / 12;
-    yp += (mouseY - yp) / 12;
-    follower.css({left:xp, top:yp});
-    
-}, 30);
-    }, function(){
-    console.log("wink wink")
-  });
-});
+                // cache the selector
+                var follower = $("#follower");
+                var xp = 0, yp = 0;
+                var loop = setInterval(function () {
+                    // change 12 to alter damping higher is slower
+                    xp += (mouseX - xp) / 12;
+                    yp += (mouseY - yp) / 12;
+                    follower.css({ left: xp, top: yp });
+
+                }, 30);
+            }, function () {
+                console.log("wink wink")
+            });
+        });
     </script>
 </head>
 
 <body>
+    <div id="nav">
+        <a href="./projects.html">Projects</a>
+    </div>
     <span class="rainbow-text" id="follower">Crilum</span>
 </body>
 
