@@ -109,3 +109,42 @@ hr {
     border: none;
     border-color: dimgrey;
 }
+
+#clicks {
+    position: fixed;
+    text-decoration: none;
+    font-size: 20px;
+    color: grey;
+    font-family: 'Product Sans';
+    bottom: 5px;
+    right: 5px;
+    display: none;
+    user-select: none;
+}
+
+#follower {
+    border: none;
+    user-select: none;
+}
+
+#info span {
+    position: fixed;
+    text-decoration: none;
+    font-size: 20px;
+    color: grey;
+    font-family: 'Product Sans';
+}
+
+#info span:hover {
+    background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
+    text-align: center;
+    background-size: 800% 800%;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+    font-family: 'Product Sans';
+    animation: rainbow 8s ease infinite;
+    text-decoration: none;
+}

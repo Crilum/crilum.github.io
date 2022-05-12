@@ -34,8 +34,30 @@
 <body>
     <div id="nav">
         <a href="./projects.html">Projects</a>
+        <a href="https://github.com/Crilum" style="left: 9.5vw;">GitHub</a>
+        <!--<a href="template" style="left: 17vw;">template</a>-->
     </div>
-    <span class="rainbow-text" id="follower">Crilum</span>
+    <button class="rainbow-text" id="follower">Crilum</button>
+    <div id="info">
+        <span id="clicks" onclick="$('#clicks').innerHTML = 'Clicks: 0'; clicks = 0;"
+            >Clicks: 0</span>
+    </div>
+    <script>
+        clicks = 0;
+        elem = document.getElementById('clicks');
+        style = getComputedStyle(elem);
+        $("#follower").click(function () {
+            clicks++;
+            document.getElementById("clicks").innerHTML = `Clicks: ${clicks}`;
+            if (style.display == "none") {
+                $('#clicks').show()
+            }
+        });
+        $('#clicks').click(function () {
+            clicks = 0;
+            document.getElementById("clicks").innerHTML = "Clicks: 0";
+        });
+    </script>
 </body>
 
 </html>
