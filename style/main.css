@@ -46,7 +46,7 @@ body {
     font-family: 'Product Sans';
 }
 
-#home-nav a, span {
+#home-nav a, #home-nav span {
     position: fixed;
     text-decoration: none;
     font-size: 20px;
@@ -135,7 +135,7 @@ hr {
     user-select: none;
 }
 
-#info span, a {
+#info span, #info a {
     position: fixed;
     text-decoration: none;
     font-size: 20px;
@@ -143,7 +143,7 @@ hr {
     font-family: 'Product Sans';
 }
 
-#info span:hover, a:hover {
+#info span:hover, #info a:hover {
     background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
     text-align: center;
     background-size: 800% 800%;
@@ -188,4 +188,16 @@ hr {
 #profile-link {
     left: 102.5px;
     top: 5px;
+}
+
+#websh {
+    left: 20px;
+}
+
+#styleprompt {
+    left: 306px;
+}
+
+#update {
+    left: 562px;
 }
