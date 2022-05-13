@@ -71,17 +71,11 @@ body {
 .apps {
     display: inline-flex;
     max-height: 69px;
-    max-width: fit-content;
     border: 1px;
     border-color: dimgrey;
     padding-left: 10px;
     padding-right: 10px;
     text-align: center;
-}
-
-.apps img {
-    max-width: 256px;
-    max-height: 256px;
 }
 
 .apps a {
@@ -97,7 +91,6 @@ body {
 
 .apps div {
     padding: 5px, 5px, 5px, 5px;
-    display: inline-block;
 }
 
 .center {
@@ -191,13 +184,18 @@ hr {
 }
 
 #websh {
-    left: 20px;
+    position: relative; 
+    float: left;
 }
 
 #styleprompt {
-    left: 306px;
+    position: relative;
+    float: left;
+
 }
 
 #update {
-    left: 562px;
+    position: relative;
+    float: left;
+
 }
