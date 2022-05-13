@@ -46,7 +46,15 @@ body {
     font-family: 'Product Sans';
 }
 
-#home-nav a, #home-nav span {
+#home-nav a {
+    position: fixed;
+    text-decoration: none;
+    font-size: 20px;
+    color: grey;
+    font-family: 'Product Sans';
+}
+
+#home-nav span {
     position: fixed;
     text-decoration: none;
     font-size: 20px;
@@ -55,6 +63,20 @@ body {
 }
 
 #nav a:hover {
+    background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
+    text-align: center;
+    background-size: 800% 800%;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+    font-family: 'Product Sans';
+    animation: rainbow 8s ease infinite;
+    text-decoration: none;
+}
+
+#home-nav a:hover {
     background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
     text-align: center;
     background-size: 800% 800%;
@@ -128,7 +150,7 @@ hr {
     user-select: none;
 }
 
-#info span, #info a {
+#info span {
     position: fixed;
     text-decoration: none;
     font-size: 20px;
@@ -136,7 +158,29 @@ hr {
     font-family: 'Product Sans';
 }
 
-#info span:hover, #info a:hover {
+#info a {
+    position: fixed;
+    text-decoration: none;
+    font-size: 20px;
+    color: grey;
+    font-family: 'Product Sans';
+}
+
+#info span:hover {
+    background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
+    text-align: center;
+    background-size: 800% 800%;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+    font-family: 'Product Sans';
+    animation: rainbow 8s ease infinite;
+    text-decoration: none;
+}
+
+#info a:hover {
     background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
     text-align: center;
     background-size: 800% 800%;
