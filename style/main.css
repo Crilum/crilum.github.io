@@ -80,8 +80,8 @@ body {
 }
 
 .apps img {
-    max-width: 256;
-    max-height: 256;
+    max-width: 256px;
+    max-height: 256px;
 }
 
 .apps a {
