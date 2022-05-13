@@ -38,7 +38,7 @@ body {
         background-position: 0% 50%
     }
 }
-#nav a {
+#nav a, span {
     position: fixed;
     text-decoration: none;
     font-size: 20px;
@@ -127,7 +127,7 @@ hr {
     user-select: none;
 }
 
-#info span {
+#info span, a {
     position: fixed;
     text-decoration: none;
     font-size: 20px;
@@ -135,7 +135,7 @@ hr {
     font-family: 'Product Sans';
 }
 
-#info span:hover {
+#info span:hover, a:hover {
     background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
     text-align: center;
     background-size: 800% 800%;
@@ -147,4 +147,37 @@ hr {
     font-family: 'Product Sans';
     animation: rainbow 8s ease infinite;
     text-decoration: none;
+}
+
+#repo-link {
+    position: fixed;
+    left: 5px;
+    bottom: 5px;
+}
+
+#separator {
+    position: fixed;
+    left: 190px;
+    bottom: 5px; 
+}
+
+#fork-link {
+    position: fixed;
+    left: 205px;
+    bottom: 5px;
+}
+
+#projects {
+    left: 5px;
+    top: 5px;
+}
+
+#separator-2 {
+    left: 90px;
+    top: 5px;
+}
+
+#profile-link {
+    left: 102.5px;
+    top: 5px;
 }

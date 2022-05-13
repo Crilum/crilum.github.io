@@ -1,7 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <title>Crilum</title>
+    <meta charset="utf-8">
     <link rel="icon" type="image/x-icon" href="./res/favicon.ico">
     <link rel="stylesheet" href="./style/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -33,18 +35,23 @@
 
 <body>
     <div id="nav">
-        <a href="./projects.html">Projects</a>
-        <a href="https://github.com/Crilum" style="left: 9.5vw;">GitHub</a>
+        <a id="projects" href="./projects.html">Projects</a>
+        <span id="separator-2">|</span>
+        <a id="profile-link" href="https://github.com/Crilum">GitHub Profile</a>
         <!--<a href="template" style="left: 17vw;">template</a>-->
     </div>
     <button class="rainbow-text" id="follower">Crilum</button>
     <div id="info">
+        <a href="https://github.com/Crilum/crilum.github.io" id="repo-link">GitHub Repository</a>
+        <span id="separator"> | </span>
+        <a href="https://github.com/Crilum/crilum.github.io/fork" id="fork-link">Fork me!</a>
         <span id="clicks">Clicks: 0</span>
     </div>
     <script>
         clicks = 0;
         elem = document.getElementById('clicks');
         style = getComputedStyle(elem);
+        clickSep = 0;
         $("#follower").click(function () {
             clicks++;
             document.getElementById("clicks").innerHTML = `Clicks: ${clicks}`;
@@ -56,6 +63,14 @@
             clicks = 0;
             document.getElementById("clicks").innerHTML = "Clicks: 0";
             $('#clicks').hide()
+        });
+        $('#separator').click(function () {
+            if (clickSep == 0) {
+                console.log('site-js: User has clicked on the clickable pipe!\nMessage from Crilum: Good job, you\'ve found the clickable pipe!');
+                clickSep++;
+            } else {
+                console.log("site-js: User has clicked on the clickable pipe!\nMessage from Crilum: You don't need to click it more than once...");
+            };
         });
     </script>
 </body>
